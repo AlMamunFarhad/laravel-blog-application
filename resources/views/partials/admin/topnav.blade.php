@@ -28,10 +28,10 @@
                         <a 
                         onclick="event.preventDefault();
                         document.getElementById('admin-logout-form').submit()" 
-                        class="dropdown-item" href="{{route('login')}}" >Logout
+                        class="dropdown-item" href="{{route('custom.login')}}" >Logout
                         </a>
                       </li>
-                          <form action="{{route('logout')}}" method="POST" id="admin-logout-form">
+                          <form action="{{route('custom.logout.form')}}" method="POST" id="admin-logout-form">
                          @csrf
                         </form>
 

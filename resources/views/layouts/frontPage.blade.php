@@ -48,7 +48,7 @@
             <a 
             onclick="event.preventDefault();
             document.getElementById('form-logout').submit()" 
-            class="nav-link" href="{{route('home')}}" >Logout
+            class="nav-link" href="{{route('custom.login')}}" >Logout
             </a>
           </li>
           
@@ -58,7 +58,7 @@
 
           @else
           <li class="nav-item">
-            <a class="nav-link" href="{{route('login')}}">Login</a>
+            <a class="nav-link" href="{{route('custom.login')}}">Login</a>
           </li>
           @endif
 

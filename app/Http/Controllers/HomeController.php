@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 // use App\Http\Controllers\Post;
@@ -26,6 +27,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // $user = new User();
+        // $user->name = "Farhad";
+        // $user->lastname = "Mamun";
+        // $user->email = "farhad@gmail.com";
+        // $user->password = bcrypt("secret123");
+        // $user->save();
+        // return "Data Seved";
       $posts = Post::with('comments', 'user')->paginate(10);
       return view('/home', compact('posts'));
     }
